@@ -1,5 +1,5 @@
 import 'dotenv/config'
-
+import * as dotenv from 'dotenv'
 import { Router } from 'express'
 import { userRepository } from './userRepository'
 import { createValidator } from 'express-joi-validation'
@@ -9,13 +9,15 @@ import {
   Request as JWTRequest,
 } from 'express-jwt'
 
+dotenv.config()
+
 export const userController = Router()
 
 const validator = createValidator()
 
 userController.use(
   expressjwt({
-    secret: process.env.JWT_SECRET!,
+    secret: 'test',
     algorithms: ['HS256'],
   }),
 )

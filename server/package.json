@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "nodemon src/index.ts",
-    "lint": "eslint --fix && prettier --write --check .",
+    "lint": "eslint --fix && prettier --write --check ",
     "prepare": "husky"
   },
   "author": "",
