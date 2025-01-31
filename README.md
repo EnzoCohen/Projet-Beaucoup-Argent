@@ -1,16 +1,13 @@
-![separe](src/main/resources/Images/Logo.png)
-# Projet HELP ORT [![Version](https://img.shields.io/badge/Version-4.1.2-gold)]()
+![separe](client/public/image/Logo.png)
+# Projet HELP ORT [![Version](https://img.shields.io/badge/Version-1.0.2-cyan)]()
 
 # Description
 
-Projet helpOrt
+Projet Beaucoup D'argent
 
-Bienvenue dans le projet helpOrt, 
+Bienvenue dans le Beaucoup D'argent, 
 
-une application dédiée à l'entraide entre élèves. La base de données utilisée est nommée "projet_help_ort".
-Ce projet est livré avec une architecture Docker prête à l'emploi, comprenant les éléments suivants :
-- Une base de donnée MariaDb
-- PHPMyAdmin
+Permettre aux utilisateurs de créer des comptes, de se connecter, de faire des demandes d'aides et de soutiens, et aux administrateurs de gérer ces demandes et d'ajouter des ressources.
 
 
 ## Initiation 
@@ -55,19 +52,24 @@ docker compose up -d
 - accepter les demandes de soutien en tant qu'administrateur.
 
 ## Technologies utilisées
-- Java
-- MariaDB
-- Docker
-- PHPMyAdmin
-- Maven
-- Fxml
-- API
-- Mailer
+* Java
+* MariaDB
+* Docker
+* PHPMyAdmin
+* Maven
+* Fxml
+* API
+* Mailer
+* TypeScript
+* JavaScript
+* Yarn
+* npm
 
 ## Auteurs
-- Ce projet a été réalisé par deux étudiants de la classe de BTS SIO 2ème année à l'ORT Montreuil :
-    - Odiya
+- Ce projet a été réalisé par deux étudiants de la classe de BSCI à l'ORT Montreuil :
     - Enzo
+    - Raphael
+    - Ruben
 
 
     
