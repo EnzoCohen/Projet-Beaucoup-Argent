@@ -1,4 +1,6 @@
-![separe](client/public/image/Logo.png)
+<img src="client/public/image/Logo.png" alt="Logo" width="200" height="200" align="right">
+
+
 # Projet HELP ORT [![Version](https://img.shields.io/badge/Version-1.0.2-cyan)]()
 
 # Description
