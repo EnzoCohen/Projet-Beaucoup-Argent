@@ -1,0 +1,153 @@
+#root {
+  text-align: center;
+  width: 100%;
+}
+
+.test{
+  max-width: 600px;
+  margin: 0 auto;
+
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0em 0em 1em rgba(0, 168, 241, 0.67));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.navbar {
+  width: 100%;
+  padding: 2rem;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 50px;
+  padding: 50px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200%;
+  max-width: 1200px;
+  margin-top: 2%;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0;
+  font-size: 13px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #333;
+}
+.nav-link:hover {
+  color: #007bff;
+}
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 50px;
+  padding: 5px 20px;
+  font-weight: 500;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  color-scheme: light;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-wrapper .fas {
+  font-size: 16px;
+  color: rgba(26, 26, 26, 0.49);
+  position: absolute;
+  pointer-events: none;
+}
+
+
+.search-bar, .search-bar-second {
+  padding: 10px;
+  font-size: 12px;
+  width: 250px;
+  outline: none;
+}
+
+.search-bar {
+  padding: 10px 10px 10px 40px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid #d3d3d3;
+}
+
+.search-bar-second {
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #d3d3d3;
+  border-left: 0.5px;
+}
+
+.search-wrapper:first-child .fas {
+  left: 10px;
+}
+
+.search-wrapper:last-child .fas {
+  left: 10px;
+}
+
+.search-button {
+  padding: 10px 10px; /* Espace interne du bouton */
+  font-size: 12px; /* Taille du texte */
+  background-color: rgb(110 205 250 );
+  border-color: #d3d3d3;
+  border-left: none; /* Supprime la bordure gauche */
+  border-radius: 0 8px 8px 0; /* Bord arrondi uniquement à droite */
+  display: flex;
+  align-items: center;
+  outline: none;
+  filter: drop-shadow(0em 0em 4em rgb(0, 168, 241));
+}
+
+/* Effet au survol du bouton */
+.search-button:hover {
+  background-color: rgb(49	111	203	); /* Même couleur qu'au repos */
+  border-color: #d3d3d3;
+}
+
+.search-button:focus-visible,
+.search-button:focus {
+  outline: none; /* Désactive l'effet de focus */
+}
