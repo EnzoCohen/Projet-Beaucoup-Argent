@@ -1,3 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
 :root {
   font-family: "Comfortaa", serif;
   line-height: 1.5;
