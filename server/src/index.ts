@@ -2,9 +2,10 @@ import express from 'express'
 import { AppDataSource } from './dataSource'
 import { userController } from './modules/user/userController'
 import { authController } from './modules/auth/authController'
+import cors from 'cors'
 
 const app = express()
-
+app.use(cors())
 app.use(express.json())
 app.get('/', (req, res) => {
   res.send('Plop!')

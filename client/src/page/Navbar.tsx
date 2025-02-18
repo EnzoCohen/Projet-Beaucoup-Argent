@@ -1,9 +1,12 @@
+import {Link} from "react-router-dom"
+import "../css/Navbar.css"
+
 export const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 <div className="logo">
-                    <a className="nav-link" href="#"><img src="../public/image/Logo.png" width="50px"/>
+                    <a className="nav-link" href="#"><img src="../../public/image/Logo.png" width="50px"/>
                     Planify</a>
                 </div>
                 <div className="search-container">
@@ -27,7 +30,7 @@ export const Navbar = () => {
                                 <a className="nav-link" href="#">Vous êtes pro ?</a>
                             </li>
                             <li className="nav-itdem">
-                                <a className="nav-link" href="#">Se connecter</a>
+                                <Link className="nav-link" to="/login">Se connecter</Link>
                             </li>
                         </ul>
                     </div>
