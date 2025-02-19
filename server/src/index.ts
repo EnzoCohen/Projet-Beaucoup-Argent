@@ -1,8 +1,8 @@
 import express from 'express'
 import { AppDataSource } from './dataSource'
 import { userController } from './modules/user/userController'
-import { authController } from './modules/auth/authController'
 import cors from 'cors'
+import { authController } from './modules/auth/authController'
 
 const app = express()
 app.use(cors())
@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
   res.send('Plop!')
 })
 
-app.use('/users', userController)
 app.use('/auth', authController)
+app.use('/users', userController)
 
 const port = process.env.PORT
   ? Number(process.env.PORT)

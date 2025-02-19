@@ -8,5 +8,5 @@ import { User } from '../user/userEntity'
 @ChildEntity()
 export class Client extends User {
   @OneToMany(()=> RDV, (rdv)=>rdv.client)
-  rdvs: RDV[]
+  rdvs?: RDV[]
 }
