@@ -4,7 +4,6 @@ import  jwt  from "jsonwebtoken";
 import { Client } from "../client/clientEntity";
 import { clientRepository } from "../client/clientRepository";
 import { createHmac } from "node:crypto";
-import { env } from "node:process";
 
 export const authController = Router()
 
