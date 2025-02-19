@@ -1,4 +1,5 @@
 import { Page } from './component/Page.tsx'
+import {Link} from "react-router-dom";
 
 
 function Login() {
@@ -78,9 +79,8 @@ function Login() {
                                             Se connecter avec Facebook
                                         </button>
                                         <div className="m-3">
-                                            <a
-                                                href="javascript:void(0)" className="font-bold text-grey-700"> Pas encore
-                                                inscrit ? Créer votre compte dès maintenant</a>
+                                            <Link to={"/register"} className="font-bold text-grey-700"> Pas encore
+                                                inscrit ? Créer votre compte dès maintenant</Link>
                                         </div>
 
                                     </div>
