@@ -7,11 +7,11 @@ export const PageNav = ({children}:PropsWithChildren)=>{
     return(
        <> 
         <Navbar></Navbar>
-        <div className="min-w-96 min-h-screen bg-indigo-50 flex justify-center  mt-3">
+        <div className="min-w-96 bg-indigo-50 flex-1 justify-center  mt-3">
           {children}
         </div>
-        <Footer></Footer>
-        </>
+           <Footer></Footer>
+       </>
 
     )
 }
