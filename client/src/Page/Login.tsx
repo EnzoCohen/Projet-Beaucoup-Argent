@@ -11,7 +11,7 @@ function Login() {
                     <div
                         className="flex justify-center w-full h-full my-auto xl:gap-14 lg:justify-normal md:gap-5 draggable">
                         <div className="flex items-center justify-center w-full lg:p-12">
-                            <div className="flex items-center xl:p-10">
+                            <div className="flex items-center xl:p-10 w-130">
                                 <form className="flex flex-col w-full h-full pb-6 text-center bg-white rounded-3xl">
                                     <h3 className="mb-3 text-4xl font-extrabold text-dark-grey-900">Se connecter</h3>
                                     <label htmlFor="email"
@@ -80,7 +80,7 @@ function Login() {
                                         </button>
                                         <div className="m-3">
                                             <Link to={"/register"} className="font-bold text-grey-700"> Pas encore
-                                                inscrit ? Créer votre compte dès maintenant</Link>
+                                                inscrit ? <br></br> Créer votre compte dès maintenant</Link>
                                         </div>
 
                                     </div>

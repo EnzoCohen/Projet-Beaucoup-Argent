@@ -5,7 +5,7 @@ export const Page = ({children}:PropsWithChildren)=>{
 
     return(
        <> 
-        <div className="min-w-96 min-h-screen bg-indigo-50 flex justify-center  mt-3">
+        <div className="w-full bg-indigo-50 h-full justify-center min-h-0 overflow-auto">
           {children}
         </div>
         <Footer></Footer>
