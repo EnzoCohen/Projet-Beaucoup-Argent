@@ -1,5 +1,5 @@
-import './Home.css'
-import { PageNav } from './component/PageNav.tsx'
+import '../Home.css'
+import { PageNav } from '../component/PageNav.tsx'
 
 function Home() {
 

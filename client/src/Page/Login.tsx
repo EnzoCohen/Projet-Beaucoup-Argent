@@ -1,4 +1,4 @@
-import { Page } from './component/Page.tsx'
+import { Page } from '../component/Page.tsx'
 import {Link} from "react-router-dom";
 
 
