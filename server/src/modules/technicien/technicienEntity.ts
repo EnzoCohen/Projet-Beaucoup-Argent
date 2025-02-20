@@ -14,6 +14,8 @@ export class Technicien extends User{
   competence?: string
   @Column()
   profilPicture?:string
+  @Column({default: true})
+  avaible?:boolean
   @OneToOne(()=>Adresse , (adresse)=>adresse.technicien)
   adresse?: Adresse
  

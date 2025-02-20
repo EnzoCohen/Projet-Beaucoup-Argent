@@ -6,6 +6,11 @@ export type Tech = {
   login: string;
   password: string;
   competence: string;
+  image:string;
+  nom:string
+  prenom:string
+  avaible:boolean
+
 };
 
 export const useTech = () => {
@@ -22,8 +27,7 @@ export const useTech = () => {
       } catch (error: any) {
         setError(error.message);
       } finally {
-         setIsLoading(false)
-      }
+        setTimeout(() => setIsLoading(false), 2000);      }
     };
     fetchTech();
   }, []);
