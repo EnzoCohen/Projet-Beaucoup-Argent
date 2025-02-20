@@ -4,7 +4,8 @@ import  jwt  from "jsonwebtoken";
 import { Client } from "../client/clientEntity";
 import { clientRepository } from "../client/clientRepository";
 import { createHmac } from "node:crypto";
-import { env } from "node:process";
+import { Technicien } from "../technicien/technicienEntity";
+import { technicienRepository } from "../technicien/technicienRepository";
 
 export const authController = Router()
 
@@ -45,13 +46,30 @@ authController.post('/register', async (req,res)=>{
             })
         }
         else{
-            const Hashpassword = createHmac('sha256', process.env.SECRET_HASH!).update(req.body.password).digest('hex')
+
+            if(req.body.technicien){
+
+                const Hashpassword = createHmac('sha256', process.env.SECRET_HASH!).update(req.body.password).digest('hex')
+                const newUser:Technicien = {
+                    login: req.body.login,
+                    password:  Hashpassword
+                }
+                
+                await technicienRepository.save(newUser)
+                 res.status(201).json({ message: "Compte créé avec succès" })
+            }else{
+                
+                const Hashpassword = createHmac('sha256', process.env.SECRET_HASH!).update(req.body.password).digest('hex')
             const newUser:Client = {
                 login: req.body.login,
                 password:  Hashpassword
             }
+            
             await clientRepository.save(newUser)
              res.status(201).json({ message: "Compte créé avec succès" })
+            }
+
+            
         }
     }
     catch(error){

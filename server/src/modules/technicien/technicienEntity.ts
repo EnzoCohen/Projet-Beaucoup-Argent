@@ -11,9 +11,9 @@ import { User } from '../user/userEntity'
 @ChildEntity()
 export class Technicien extends User{
   @Column()
-  competenece: string
+  competenece?: string
   @ManyToOne(()=>Societe, (societe)=>societe.techniciens)
-  societe: Societe
+  societe?: Societe
   @OneToMany(()=>EDT, (edt)=>edt.technicien)
-  edts: EDT[]
+  edts?: EDT[]
 }
