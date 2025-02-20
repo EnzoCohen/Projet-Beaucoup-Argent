@@ -7,7 +7,6 @@ import {
 } from 'typeorm'
 import { Client } from '../client/clientEntity'
 import { Adresse } from '../adresse/adresseEntity'
-import { EDT } from '../EDT/edtEntity'
 
 @Entity()
 export class RDV {
@@ -25,7 +24,6 @@ export class RDV {
   client: Client
   @ManyToOne(()=> Adresse, (adresse)=> adresse.rdvs)
   adresse:Adresse
-  @ManyToOne(()=> EDT, (edt)=> edt.rdvs)
-  edt:EDT
+ 
   
 }

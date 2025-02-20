@@ -9,4 +9,5 @@ import { User } from '../user/userEntity'
 export class Client extends User {
   @OneToMany(()=> RDV, (rdv)=>rdv.client)
   rdvs?: RDV[]
+  
 }

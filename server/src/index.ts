@@ -3,7 +3,6 @@ import { AppDataSource } from './dataSource'
 import { userController } from './modules/user/userController'
 import cors from 'cors'
 import { authController } from './modules/auth/authController'
-import { societeController } from './modules/societe/societeController'
 import { technicienController } from './modules/technicien/technicienController'
 
 const app = express()
@@ -15,7 +14,6 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authController)
 app.use('/users', userController)
-app.use('/societes', societeController)
 app.use('/technicien',technicienController)
 
 const port = process.env.PORT

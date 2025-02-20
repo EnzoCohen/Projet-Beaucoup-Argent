@@ -13,5 +13,11 @@ export abstract class User {
   @Column({unique: true,})
   login: string
   @Column()
-  password: string
+  password:string
+  @Column({ nullable: true })
+  prenom?:string
+  @Column({ nullable: true })
+  nom?:string
+  @Column({ nullable: true })
+  telephone?:string
 }

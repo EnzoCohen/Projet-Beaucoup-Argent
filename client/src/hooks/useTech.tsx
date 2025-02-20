@@ -5,7 +5,7 @@ export type Tech = {
   id: number;
   login: string;
   password: string;
-  competenece: string;
+  competence: string;
 };
 
 export const useTech = () => {
