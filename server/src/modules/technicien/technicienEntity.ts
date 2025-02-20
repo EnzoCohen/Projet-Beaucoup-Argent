@@ -3,17 +3,19 @@ import {
   Column,
   ManyToOne,
   OneToMany,
+  OneToOne,
 } from 'typeorm'
-import { Societe } from '../societe/societeEntity'
-import { EDT } from '../EDT/edtEntity'
 import { User } from '../user/userEntity'
+import { Adresse } from '../adresse/adresseEntity'
 
 @ChildEntity()
 export class Technicien extends User{
   @Column()
-  competenece?: string
-  @ManyToOne(()=>Societe, (societe)=>societe.techniciens)
-  societe?: Societe
-  @OneToMany(()=>EDT, (edt)=>edt.technicien)
-  edts?: EDT[]
+  competence?: string
+  @Column()
+  profilPicture?:string
+  @OneToOne(()=>Adresse , (adresse)=>adresse.technicien)
+  adresse?: Adresse
+ 
+  
 }

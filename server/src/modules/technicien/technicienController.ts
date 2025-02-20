@@ -17,7 +17,7 @@ technicienController.get('/', async (req, res)=>{
 technicienController.get('/:competence', async (req,res)=>{
     try{
         res.send(await technicienRepository.findBy({
-            competenece: ILike(req.params.competence)
+            competence: ILike(req.params.competence)
         }))
     }
     catch(error){

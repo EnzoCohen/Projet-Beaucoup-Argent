@@ -2,10 +2,12 @@ import {
   Column,
   Entity,
   OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
   
 } from 'typeorm'
 import { RDV } from '../rdv/rdvEntity'
+import { Technicien } from '../technicien/technicienEntity'
 
 @Entity()
 export class Adresse {
@@ -21,4 +23,6 @@ export class Adresse {
   batiment:string
   @OneToMany(()=>RDV, (rdv)=> rdv.adresse)
   rdvs:RDV[]
+  @OneToOne(()=>Technicien,(technicien)=>technicien.adresse)
+  technicien:Technicien
 }
