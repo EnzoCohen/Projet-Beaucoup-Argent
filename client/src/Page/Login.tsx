@@ -10,7 +10,8 @@ function Login() {
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-
+        // TODO: Implement login
+        // Partie du code qui permet de se connecter à l'API backend : vérification de l'email et du mot de passe
         try {
             const response = await fetch('http://localhost:3000/auth/login', {
                 method: 'POST',
@@ -19,20 +20,20 @@ function Login() {
                 },
                 body: JSON.stringify({ email, password }),
             });
-
+        // Si la réponse est 200, on récupère le token et on le stocke dans le contexte d'authentification
             if (response.status === 200) {
                 const data = await response.json();
                 alert('Login successful ' + "[" + data.token + "]");
                 setToken(data.token);
 
             } else if (response.status === 403) {
-                alert('Email ou mot de passe invalide');
+                alert('Email or password incorrect2');
             } else {
-                alert('An error occurred during login');
+                alert('An error occurred during login3');
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('An error occurred during login');
+            alert('An error occurred during login catch');
         }
     };
 

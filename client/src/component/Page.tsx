@@ -1,5 +1,4 @@
 import { PropsWithChildren } from "react";
-import { Footer } from "./Footer";
 
 export const Page = ({children}:PropsWithChildren)=>{
 
@@ -8,8 +7,6 @@ export const Page = ({children}:PropsWithChildren)=>{
         <div className="w-full h-full justify-center min-h-0 overflow-auto">
           {children}
         </div>
-        <Footer></Footer>
-        </>
-
+       </>
     )
 }
