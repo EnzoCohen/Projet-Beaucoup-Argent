@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import {Alert, Button, StyleSheet, Text, TextInput, View} from 'react-native';
 import {useState} from "react";
-import Navbleue from "./src/components/Navbleue";
+import Navbar from "./src/components/Home/Navbar";
 
 export default function App() {
   const [login, setlogin] = useState('');
@@ -14,14 +14,7 @@ export default function App() {
 
   return (
       <>
-          <Navbleue></Navbleue><View style={styles.container}>
-          <Text style={styles.label}>Login:</Text>
-          <TextInput value={login} style={styles.input} onChangeText={setlogin} placeholder="Enter your login"/>
-          <Text style={styles.label}>Password:</Text>
-          <TextInput value={password} style={styles.input} onChangeText={setpassword}
-                     placeholder="Enter your password"/>
-          <Button title={"Entrer"} onPress={Login}></Button>
-          <StatusBar style="auto"/>
+          <Navbar></Navbar><View style={styles.container}>
       </View>
       </>
   );
