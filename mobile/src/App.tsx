@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import {Alert, Button, StyleSheet, Text, TextInput, View} from 'react-native';
-import {useState} from "react";
-import Navbar from "./src/components/Home/Navbar";
+import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { useState } from "react";
+import Navbar from "./components/Home/Navbar";
 
 export default function App() {
   const [login, setlogin] = useState('');
@@ -13,10 +13,10 @@ export default function App() {
   };
 
   return (
-      <>
-          <Navbar></Navbar><View style={styles.container}>
+    <>
+      <Navbar></Navbar><View style={styles.container}>
       </View>
-      </>
+    </>
   );
 }
 
