@@ -52,7 +52,9 @@ authController.post('/register', async (req,res)=>{
                 const Hashpassword = createHmac('sha256', process.env.SECRET_HASH!).update(req.body.password).digest('hex')
                 const newUser:Technicien = {
                     login: req.body.login,
-                    password:  Hashpassword
+                    password:  Hashpassword,
+                    nom:req.body.nom,
+                    prenom: req.body.prenom ,
                 }
                 
                 await technicienRepository.save(newUser)
