@@ -25,14 +25,16 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-    [
-      "expo-font",
-      {
-        "fonts": ["node_modules/@expo-google-fonts/Comfortaa/fonts/Comfortaa_400Regular.ttf", "node_modules/@expo-google-fonts/Comfortaa/fonts/Comfortaa_700Bold.ttf"]
-      }
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo-google-fonts/Comfortaa/fonts/Comfortaa_400Regular.ttf",
+            "node_modules/@expo-google-fonts/Comfortaa/fonts/Comfortaa_700Bold.ttf"
+          ]
+        }
+      ],
+      "expo-router"
     ]
-  ]
-}
-
-
+  }
 }
