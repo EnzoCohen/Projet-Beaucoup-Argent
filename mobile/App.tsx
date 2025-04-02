@@ -1,14 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, Button, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import { useRef, useState } from "react";
-import Navbleue from "./src/components/Navbleue";
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-
+import {Alert, Button, StyleSheet, Text, TextInput, View} from 'react-native';
+import {useState} from "react";
+import Navbar from "./src/components/Home/Navbar";
 
 export default function App() {
-const scrollViewRef = useRef<ScrollView>(null)
-const passwordRef = useRef<TextInput>(null)
-
   const [login, setlogin] = useState('');
   const [password, setpassword] = useState('')
   const Login = () => {
@@ -18,18 +13,10 @@ const passwordRef = useRef<TextInput>(null)
   };
 
   return (
-    <ScrollView style={{ flex: 1 }} ref={scrollViewRef}  >
-      <Navbleue></Navbleue>
-      <View style={styles.container}>
-        <Text style={styles.label}>Login:</Text>
-        <TextInput returnKeyType='next'  onSubmitEditing={()=>passwordRef.current?.focus()} value={login} style={styles.input} onChangeText={setlogin} placeholder="Enter your login" onPress={()=>scrollViewRef.current?.scrollToEnd({animated : true})}/>
-        <Text style={styles.label}>Password:</Text>
-        <TextInput ref={passwordRef} returnKeyType='send' value={password} style={styles.input} onChangeText={setpassword}
-          placeholder="Enter your password" />
-        <Button title={"Entrer"} onPress={Login}></Button>
-        <StatusBar style="auto" />
+      <>
+          <Navbar></Navbar><View style={styles.container}>
       </View>
-    </ScrollView>
+      </>
   );
 }
 
