@@ -9,6 +9,60 @@ export default function RegisterScreen() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
 
+  const handleRegister = async () => {
+    if (!fullName || !email || !password || !confirmPassword) {
+      alert("Merci de remplir tous les champs.");
+      return;
+    }
+  
+    if (password !== confirmPassword) {
+      alert("Les mots de passe ne correspondent pas.");
+      return;
+    }
+  
+    // Séparation prénom / nom
+    const [prenom, ...nomParts] = fullName.trim().split(" ");
+    const nom = nomParts.join(" ");
+  
+    try {
+      const response = await fetch("http://172.20.10.2:3000/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          login: email,
+          password: password,
+          nom: nom,
+          prenom: prenom,
+          technicien: true, 
+        }),
+      });
+  
+      const data = await response.json();
+  
+      console.log("Status:", response.status);
+      console.log("Données reçues:", data);
+  
+      switch (response.status) {
+        case 201:
+          alert("Inscription réussie !");
+          break;
+        case 409:
+          alert(data.error || "Cet email est déjà utilisé.");
+          break;
+        default:
+          alert(data.error || `Erreur inconnue (status: ${response.status})`);
+          break;
+      }
+    } catch (error) {
+      console.error("Erreur réseau :", error);
+      alert("Impossible de contacter le serveur.");
+    }
+  };
+  
+  
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Créer un compte</Text>
@@ -65,7 +119,7 @@ export default function RegisterScreen() {
       />
 
       {/* Bouton d'inscription */}
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={handleRegister}>
         <Ionicons name="person-add" size={20} color="white" />
         <Text style={styles.buttonText}>S'inscrire</Text>
       </TouchableOpacity>
