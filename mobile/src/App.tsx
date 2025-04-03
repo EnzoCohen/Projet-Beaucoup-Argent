@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useState } from "react";
 import Navbar from "./components/Home/Navbar";
+import { useTech } from './hooks/useTech';
 
 export default function App() {
   const [login, setlogin] = useState('');
@@ -11,8 +12,11 @@ export default function App() {
     console.log(login);
     console.log(password);
   };
+  const {tech,isLoading,error} = useTech();
 
+  console.log(tech);
   return (
+
     <>
       <Navbar></Navbar><View style={styles.container}>
       </View>

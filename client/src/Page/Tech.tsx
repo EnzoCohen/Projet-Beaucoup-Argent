@@ -6,7 +6,6 @@ export const Tech = () => {
   return (
     <PageNav>
         <TechCard></TechCard>
-      
     </PageNav>
   );
 };
