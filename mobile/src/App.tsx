@@ -12,9 +12,7 @@ export default function App() {
     console.log(login);
     console.log(password);
   };
-  const {tech,isLoading,error} = useTech();
 
-  console.log(tech);
   return (
 
     <>
