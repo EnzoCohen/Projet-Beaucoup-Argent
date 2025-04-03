@@ -7,6 +7,7 @@ import {
 } from 'typeorm'
 import { User } from '../user/userEntity'
 import { Adresse } from '../adresse/adresseEntity'
+import { RDV } from '../rdv/rdvEntity'
 
 @ChildEntity()
 export class Technicien extends User{
@@ -18,6 +19,7 @@ export class Technicien extends User{
   avaible?:boolean
   @OneToOne(()=>Adresse , (adresse)=>adresse.technicien)
   adresse?: Adresse
- 
+ @OneToMany(()=> RDV, (rdv)=>rdv.Technicien)
+   rdvs?: RDV[]
   
 }

@@ -12,17 +12,19 @@ import { Technicien } from '../technicien/technicienEntity'
 @Entity()
 export class Adresse {
   @PrimaryGeneratedColumn()
-  id: number 
+  id?: number 
   @Column()
   ville: string
   @Column()
   pays:string
   @Column()
   rue: string
+  @Column()
+  numero: number
   @Column({nullable: true})
   batiment:string
   @OneToMany(()=>RDV, (rdv)=> rdv.adresse)
-  rdvs:RDV[]
+  rdvs?:RDV[]
   @OneToOne(()=>Technicien,(technicien)=>technicien.adresse)
   technicien:Technicien
 }

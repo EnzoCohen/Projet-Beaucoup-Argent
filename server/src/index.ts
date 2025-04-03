@@ -4,6 +4,7 @@ import { userController } from './modules/user/userController'
 import cors from 'cors'
 import { authController } from './modules/auth/authController'
 import { technicienController } from './modules/technicien/technicienController'
+import { rdvController } from './modules/rdv/rdvController'
 
 const app = express()
 app.use(cors())
@@ -15,6 +16,8 @@ app.get('/', (req, res) => {
 app.use('/auth', authController)
 app.use('/users', userController)
 app.use('/technicien',technicienController)
+app.use('/rdv',rdvController)
+
 
 const port = process.env.PORT
   ? Number(process.env.PORT)
