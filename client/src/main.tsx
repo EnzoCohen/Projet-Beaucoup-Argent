@@ -7,7 +7,9 @@ import Login from "./Page/Login.tsx";
 import Register from "./Page/Register.tsx";
 import Test from "./Page/Test.tsx";
 import { Tech } from './Page/Tech.tsx'
+import AdminDashboard from './Page/AdminDashboard.tsx'
 import ProtectedRoute from "./Auth/ProtectedRoute.tsx";
+import AdminRoute from "./Auth/AdminRoute.tsx";
 import {AuthProvider} from "./Auth/AuthContext.tsx";
 
 createRoot(document.getElementById('root')!).render(
@@ -19,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/tech" element={<Tech />} />
+                    <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
                     <Route path="/test" element={<ProtectedRoute> <Test /> </ProtectedRoute> } />
                 </Routes>
             </BrowserRouter>

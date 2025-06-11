@@ -35,6 +35,7 @@ export const Navbar = ()=> {
           </div>
           <div className="navbar-end">
           <div className="flex gap-2">
+              <Link to="/admin" className="btn">Dashboard</Link>
               <div className="dropdown dropdown-end">
                   <Link to={"/login"}>
                   <button className="btn bg-white text-black border-[#e5e5e5]" >
